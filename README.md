@@ -23,6 +23,8 @@ Validação: Mecanismos automáticos e manuais para validação e filtragem de d
 Visualização: Dados disponíveis em gráficos para facilitar a análise.
 Acessibilidade: A interface é simples e acessível via navegadores.
 
+![WhatsApp Image 2024-12-06 at 13 20 41](https://github.com/user-attachments/assets/97e738b7-96d3-44e2-b426-f126ba0a2a93)
+
 ## Arquitetura 
 
 **Camada de Frontend**
@@ -43,12 +45,17 @@ Ferramentas sugeridas:
 * Node.js (JavaScript no servidor).
 * Express.js para criar APIs.
 
-## Banco de Dados
+**Banco de Dados**
 MongoDB Compass:
 
 Ferramenta de interface gráfica para gerenciar e visualizar dados armazenados no MongoDB.
 
+Link da figma do projeto [Pluviometro](https://www.figma.com/design/0xbMHH0InTiDjTUKUT0e32/PLUVIOMETRO)
+
 Para mais informação confira a documentação no [Wiki do Projeto](https://github.com/EbenezerPedro/pluviometro-insercao-dados/wiki/1.Proposta)
+
+![WhatsApp Image 2024-12-06 at 13 20 14](https://github.com/user-attachments/assets/68121952-c613-4101-9630-2e696eed0439)
+
 
 ## Instruções de execução
 
