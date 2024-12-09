@@ -52,37 +52,51 @@ Para mais informação confira a documentação no [Wiki do Projeto](https://git
 
 ## Instruções de execução
 
-Para instalar e executar o backend do projeto disponível no repositório GitHub pluviometro-insercao-dados, siga os passos abaixo:
+**1. Backend**
 
-**Passo 1: Clonar o Repositório**
+Clonar o Repositório:
 
-Primeiro, clone o repositório para sua máquina local usando o comando:
+* git clone https://github.com/EbenezerPedro/pluviometro-insercao-dados.git
 
-git clone https://github.com/EbenezerPedro/pluviometro-insercao-dados.git
+Acessar o Diretório do Backend:
 
-**Passo 2: Navegar para o Diretório do Backend**
+* cd pluviometro-insercao-dados/Back_End
 
-Navegue até o diretório do backend:
+Instalar Dependências:
 
-cd pluviometro-insercao-dados/Back_End
-
-**Passo 3: Instalar Dependências**
-
-* Instale as dependências do projeto usando o npm:
 * npm install
 
-**Passo 4: Configurar Variáveis de Ambiente**
-Crie um arquivo .env na raiz do projeto e adicione as variáveis de ambiente necessárias. Um exemplo de configuração pode ser:
+Configurar Variáveis de Ambiente:
 
-* NOTES_APP_MONGODB_HOST=localhost
+Crie um arquivo .env com:
+
+* NOTES_APP_MONGODB_HOST=localhost  
 * NOTES_APP_MONGODB_DATABASE=pluviômetro
 
-**Passo 5: Iniciar o Servidor**
-Inicie o servidor usando o comando:
+Iniciar o Servidor:
 
-npm start
+* npm start
 
-**Passo 6: Verificar Conexão com o Banco de Dados**
+**2. Frontend**
 
-Certifique-se de que o MongoDB está rodando e que a conexão com o banco de dados foi estabelecida corretamente. Você deve ver a mensagem "Database is connected" no console.
+Acessar o Diretório do Frontend:
+
+* cd pluviometro-insercao-dados/Front_End
+
+Instalar Dependências:
+
+* npm install
+
+Iniciar o Servidor de Desenvolvimento:
+
+* npm start
+
+
+
+
+
+
+
+
+
 
