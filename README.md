@@ -91,6 +91,21 @@ Iniciar o Servidor de Desenvolvimento:
 
 * npm start
 
+Depois de configurar e executar o frontend, você pode acessar a aplicação no seu navegador através do endereço http://localhost:3000 (ou outro endereço/porta especificado pelo Vite).
+
+Se você encontrar algum problema, verifique as mensagens de erro no console e certifique-se de que todas as dependências e serviços necessários estão configurados corretamente.
+
+Para mais informação confira a documentação no [Wiki do Projeto](https://github.com/EbenezerPedro/pluviometro-insercao-dados/wiki/Instru%C3%A7%C3%B5es-de-Execu%C3%A7%C3%A3o)
+
+## Benefícios dessa Arquitetura
+
+Simples e direta: Ferramentas básicas e configuráveis.
+
+Colaborativa: Permite que múltiplos usuários insiram e visualizem dados.
+
+Escalável: MongoDB suporta fácil expansão e consultas complexas.
+
+Acessível: HTML, CSS e JavaScript são tecnologias amplamente conhecidas e compatíveis com navegadores.
 
 
 
