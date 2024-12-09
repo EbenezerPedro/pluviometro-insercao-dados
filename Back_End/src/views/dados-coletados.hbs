@@ -1,0 +1,102 @@
+{{> messages}}
+<div class="row">
+  <div class="col-md-6 mx-auto">
+    <div class="card">
+      <div class="card-header text-center">
+        Pesquisa de Dados Coletados
+      </div>
+      <div class="card-body">
+        <form action="/dados-coletados" method="POST">
+          <div class="form-group mb-3">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" class="form-control" required>
+              <option value="Santa Catarina">Santa Catarina</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label for="municipio">Município</label>
+            <select id="municipio" name="municipio" class="form-control" required>
+              <!-- Municípios serão preenchidos dinamicamente -->
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label for="bairro">Bairro</label>
+            <select id="bairro" name="bairro" class="form-control" required>
+              <!-- Bairros serão preenchidos dinamicamente -->
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label for="periodo">Período</label>
+            <select id="periodo" name="periodo" class="form-control" required>
+              <option value="dia">Dia</option>
+              <option value="semana">Semana</option>
+              <option value="mes">Mês</option>
+              <option value="ano">Ano</option>
+            </select>
+          </div>
+          <div class="form-group mb-3" id="data-inicio-container">
+            <label for="dataInicio">Data Início</label>
+            <input type="date" id="dataInicio" name="dataInicio" class="form-control" required>
+          </div>
+          <div class="form-group mb-3" id="data-fim-container">
+            <label for="dataFim">Data Fim</label>
+            <input type="date" id="dataFim" name="dataFim" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Pesquisar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const municipios = {
+    "Santa Catarina": ["Araranguá", "Criciúma", "Sombrio", "Balneário Arroio do Silva", "Maracajá"]
+  };
+
+  const bairros = {
+    "Araranguá": ["Centro", "Cidade Alta", "Coloninha", "Divinéia"],
+    "Criciúma": ["Centro", "Próspera", "Santa Bárbara", "Pinheirinho"],
+    "Sombrio": ["Centro", "Guarita", "Jardim Ultramar", "São Luiz"],
+    "Balneário Arroio do Silva": ["Centro", "Zona Nova", "Zona Sul", "Zona Norte"],
+    "Maracajá": ["Centro", "Espigão da Toca", "Encruzo do Barro Vermelho", "Garajuva"]
+  };
+
+  document.getElementById('estado').addEventListener('change', function() {
+    const estado = this.value;
+    const municipioSelect = document.getElementById('municipio');
+    municipioSelect.innerHTML = '<option value="">Selecione o município</option>';
+    municipios[estado].forEach(municipio => {
+      const option = document.createElement('option');
+      option.value = municipio;
+      option.textContent = municipio;
+      municipioSelect.appendChild(option);
+    });
+  });
+
+  document.getElementById('municipio').addEventListener('change', function() {
+    const municipio = this.value;
+    const bairroSelect = document.getElementById('bairro');
+    bairroSelect.innerHTML = '<option value="">Selecione o bairro</option>';
+    bairros[municipio].forEach(bairro => {
+      const option = document.createElement('option');
+      option.value = bairro;
+      option.textContent = bairro;
+      bairroSelect.appendChild(option);
+    });
+  });
+
+  document.getElementById('periodo').addEventListener('change', function() {
+    const periodo = this.value;
+    const dataFimContainer = document.getElementById('data-fim-container');
+    if (periodo === 'dia' || periodo === 'semana') {
+      dataFimContainer.style.display = 'none';
+      document.getElementById('dataFim').value = '';
+    } else {
+      dataFimContainer.style.display = 'block';
+    }
+  });
+
+  // Disparar o evento change para preencher os municípios ao carregar a página
+  document.getElementById('estado').dispatchEvent(new Event('change'));
+</script>
