@@ -46,6 +46,7 @@ Ferramentas sugeridas:
 * Express.js para criar APIs.
 
 **Banco de Dados**
+
 MongoDB Compass:
 
 Ferramenta de interface gráfica para gerenciar e visualizar dados armazenados no MongoDB.
