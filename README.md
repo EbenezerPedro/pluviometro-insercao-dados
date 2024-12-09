@@ -23,7 +23,7 @@ Validação: Mecanismos automáticos e manuais para validação e filtragem de d
 Visualização: Dados disponíveis em gráficos para facilitar a análise.
 Acessibilidade: A interface é simples e acessível via navegadores.
 
-## Arquitetura Geral
+## Arquitetura 
 
 **Camada de Frontend**
 
@@ -49,3 +49,40 @@ MongoDB Compass:
 Ferramenta de interface gráfica para gerenciar e visualizar dados armazenados no MongoDB.
 
 Para mais informação confira a documentação no [Wiki do Projeto](https://github.com/EbenezerPedro/pluviometro-insercao-dados/wiki/1.Proposta)
+
+## Instruções de execução
+
+Para instalar e executar o backend do projeto disponível no repositório GitHub pluviometro-insercao-dados, siga os passos abaixo:
+
+**Passo 1: Clonar o Repositório**
+
+Primeiro, clone o repositório para sua máquina local usando o comando:
+
+git clone https://github.com/EbenezerPedro/pluviometro-insercao-dados.git
+
+**Passo 2: Navegar para o Diretório do Backend**
+
+Navegue até o diretório do backend:
+
+cd pluviometro-insercao-dados/Back_End
+
+**Passo 3: Instalar Dependências**
+
+* Instale as dependências do projeto usando o npm:
+* npm install
+
+**Passo 4: Configurar Variáveis de Ambiente**
+Crie um arquivo .env na raiz do projeto e adicione as variáveis de ambiente necessárias. Um exemplo de configuração pode ser:
+
+* NOTES_APP_MONGODB_HOST=localhost
+* NOTES_APP_MONGODB_DATABASE=pluviômetro
+
+**Passo 5: Iniciar o Servidor**
+Inicie o servidor usando o comando:
+
+npm start
+
+**Passo 6: Verificar Conexão com o Banco de Dados**
+
+Certifique-se de que o MongoDB está rodando e que a conexão com o banco de dados foi estabelecida corretamente. Você deve ver a mensagem "Database is connected" no console.
+
